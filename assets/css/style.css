@@ -21,7 +21,7 @@ body{
 .container{
     max-width: 640px;
     margin: 50px auto;
-    background: cornsilk;
+    background: white;
     padding: 30px;
     border-radius: 10px;
 }
@@ -47,4 +47,8 @@ body{
 
 .btn:hover {
     background-color: #8d8d8d;
+}
+
+.btn-eq:hover {
+    background-color: rgb(81, 81, 219);
 }
