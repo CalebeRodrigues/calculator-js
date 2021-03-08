@@ -18,31 +18,16 @@ function startsCalculator () {
         calc() {
             try {
                 let resul = this.display.value;
-                const array = resul.split(' ');
 
-                const num1 = Number(array[0]); 
-                const num2 = Number(array[2]);
+                resul = eval(resul);
 
-                switch (array[1]) {
-                    case '+':
-                        resul = num1 + num2;
-                        break;
-                    case '-':
-                        resul = num1 - num2;
-                        break;
-                    case '*':
-                        resul = num1 * num2;
-                        break;
-                    case '/':
-                        resul = num1 / num2;
-                        break;
-                    default:
-                        throw new TypeError();
+                if(!resul) {
+                    alert('Conta inválida!');
+                    return;
                 }
                 
                 this.display.value = resul;
             }
-
             catch (e) {
                 alert('Conta inválida!');
             }
